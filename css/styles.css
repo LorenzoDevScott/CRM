@@ -23,13 +23,13 @@ html, body {
     width: 100%;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    background-color: #2274a5;
+    background-color: #424242;
     color: #ffffff;
 }
 
 /* Styling for the cards on the Home Page */
 .card {
-    width: 35rem;
+    width: 27rem;
     padding: 1em;
     margin: 1em;
 }
@@ -42,7 +42,7 @@ html, body {
 .topstrip {
     display: flex;
     flex-flow: row nowrap;
-    background-color: #e9f1f7;
+    background-color: #fffbff;
 }
 
 nav ul {
@@ -68,7 +68,7 @@ nav ul li a {
 
 nav ul li:hover {
     transition: 500ms;
-    background-color: #333;
+    background-color: #424242;
 }
 
 nav ul li a:hover {
@@ -86,7 +86,7 @@ nav ul li a:visited {
 
 #branding:hover {
     transition: 650ms;
-    background-color: #333;
+    background-color: #424242;
 }
 
 #brand:hover {

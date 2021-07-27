@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Basis for setting a clean slate for styling the document */
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+/* This flex container sets everything up so it would be managed TOP-DOWN */
+.container{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    height: 100%;
+}
+
+/* div:nth-child(even){
+    background-color: #2274a5;
+    color: #ffffff;
+} */
+
+.content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: #2274a5;
+    color: #ffffff;
+}
+
+.card {
+    width: 35rem;
+}
+
+.topstrip {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height:100%;
+    display:table;
+}
+
+nav ul li {
+    float: left;
+    padding: 2px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 22px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+nav ul li:hover {
+    transition: 500ms;
+    background-color: #333;
+}
+
+nav ul li a:hover {
+    transition: 500ms;
+    color: #ffffff;
+}
+
+nav ul li a:visited {
+    text-decoration: none;
+}
+
+#brand {
+    padding:10px;
+}
+
+#branding:hover {
+    transition: 650ms;
+    background-color: #333;
+}
+
+#brand:hover {
+    filter: invert(1);
+}

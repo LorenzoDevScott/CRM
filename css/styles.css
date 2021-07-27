@@ -16,11 +16,7 @@ html, body {
     height: 100%;
 }
 
-/* div:nth-child(even){
-    background-color: #2274a5;
-    color: #ffffff;
-} */
-
+/* Container for the content of the webpage */
 .content {
     display: flex;
     flex: 1;
@@ -31,13 +27,22 @@ html, body {
     color: #ffffff;
 }
 
+/* Styling for the cards on the Home Page */
 .card {
     width: 35rem;
+    padding: 1em;
+    margin: 1em;
 }
 
+.cardheader p{
+    margin: 8px 0px;
+}
+
+/* Container for the navigation bar */
 .topstrip {
     display: flex;
     flex-flow: row nowrap;
+    background-color: #e9f1f7;
 }
 
 nav ul {
@@ -86,4 +91,19 @@ nav ul li a:visited {
 
 #brand:hover {
     filter: invert(1);
+}
+
+/* Styling for the ticket card */
+#ticket span{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#ticket span+span {
+    margin-right: 20px;
+}
+
+td {
+    padding-bottom: 5px;
+    vertical-align: top;
 }

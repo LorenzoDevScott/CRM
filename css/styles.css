@@ -10,32 +10,15 @@ html, body {
 
 /* This flex container sets everything up so it would be managed TOP-DOWN */
 .container{
-    display: flex;
-    flex-flow: column wrap;
-    align-content: space-between;
     height: 100%;
-}
-
-/* Container for the content of the webpage */
-.content {
-    display: flex;
-    flex: 1;
-    width: 100%;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    background-color: #424242;
-    color: #ffffff;
-}
-
-/* Styling for the cards on the Home Page */
-.card {
-    width: 27rem;
-    padding: 1em;
-    margin: 1em;
-}
-
-.cardheader p{
-    margin: 8px 0px;
+    display: grid;
+    grid-template-rows: 4rem auto;
+    
+    /* 12 column layout */
+    grid-template-areas: 
+        "header header header header header header header header header header header header"
+        "content content content content content content content content content content content content"
+    ;
 }
 
 /* Container for the navigation bar */
@@ -43,6 +26,7 @@ html, body {
     display: flex;
     flex-flow: row nowrap;
     background-color: #fffbff;
+    grid-area: header;
 }
 
 nav ul {
@@ -91,6 +75,44 @@ nav ul li a:visited {
 
 #brand:hover {
     filter: invert(1);
+}
+
+/* Container for the content of the webpage */
+.content {
+    background-color: #424242;
+    color: #ffffff;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+/* Styling for the cards on the Home Page */
+@media (min-width: 799px) {
+    .card {
+        font-size: 0.75rem;
+        margin: 3rem;
+    }
+}
+
+@media (min-width: 1365px) {
+    .card {
+        font-size: 1rem;
+        margin-left: 25%;
+    }
+}
+
+@media (min-width: 1919px) {
+    .card {
+        font-size: 1.25rem;
+    }
+}
+
+
+.cardheader p{
+    margin: 8px 0px;
 }
 
 /* Styling for the ticket card */

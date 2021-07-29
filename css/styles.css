@@ -8,7 +8,8 @@ html, body {
     color: #333;
 }
 
-/* This flex container sets everything up so it would be managed TOP-DOWN */
+                                        /* Index Page */
+/* This grid container sets everything up so it would be managed TOP-DOWN */
 .container{
     height: 100%;
     display: grid;
@@ -110,7 +111,6 @@ nav ul li a:visited {
     }
 }
 
-
 .cardheader p{
     margin: 8px 0px;
 }
@@ -128,4 +128,114 @@ nav ul li a:visited {
 td {
     padding-bottom: 5px;
     vertical-align: top;
+}
+
+                                            /* Ticket Page */
+
+/* Formatting the Form with the Ticket Search Bar */
+#ticketContainer {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 4rem auto;
+    
+    /* 12 column layout */
+    grid-template-areas: 
+        "header header header header header header header header header header header header"
+        "ticketContent ticketContent ticketContent ticketContent ticketContent ticketContent ticketContent ticketContent ticketContent ticketContent ticketContent ticketContent"
+    ;
+
+}
+
+#ticketContent {
+    background-color: #424242;
+    color: #ffffff;
+    grid-area: ticketContent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "form form"
+    ;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+#ticketBody {
+    margin: 3em 5em;
+    grid-area: form;
+}
+
+#ticketsearch {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #424242;
+    color: #ffffff;
+}
+
+#ticketsearchbutton {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #424242;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+#ticketsearchbutton:active {
+    border: none;
+    background-color: #ffffff;
+    color: #333;
+    transition: 0.2s
+}
+
+#createticket {
+    border: none;
+    justify-self: end;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    float: right;
+    background-color: #ffffff;
+}
+
+/* Ticket Table */
+.tablespacing {
+    border-spacing: 5px;
+}
+
+#tickettable {
+    width: 100%;
+    margin-top: 2rem;
+    border: 1px solid #ffffff;
+}
+
+#tickettable button{
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+#tickettable th{
+    text-align: left;
+}
+
+
+#tickettable th:nth-child(1) {
+    width: 4rem;
+    border: none;
+}
+
+#tickettable th:nth-child(2) {
+    width: 10rem;
+}
+
+#tickettable th:nth-child(3) {
+    width: 10rem;
+}
+
+#tickettable th:nth-child(4) {
+    width: 20rem;
 }
